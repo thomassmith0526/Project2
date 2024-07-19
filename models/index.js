@@ -1,8 +1,7 @@
-//imports models
+
 const Client = require('./Client');
 const Employee = require('./Employee');
-const Jobs = require('./Job');
-const Task = require('./Task');
+const Job = require('./Job');
+const Task = require('./task');
 
-
-//export models
+module.exports = {Client, Employee, Job, Task}
