@@ -14,6 +14,9 @@ Client.init({
     }, 
     last_name: {
     type: DataTypes.STRING(150)
+    }, 
+    location: {
+    type: DataTypes.STRING(200)
 }
 },{
     sequelize,

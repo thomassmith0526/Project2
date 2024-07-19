@@ -30,8 +30,15 @@ Job.init({
             keys: 'id'
           }
     },
-    job_date: {
+    date: {
         type: DataTypes.STRING(40)
+    },
+    location: {
+        type: DataTypes.STRING(200),
+        references: {
+            model: 'client',
+            key: 'location'
+        }
     },
     comments: {
         type: DataTypes.STRING(200)
