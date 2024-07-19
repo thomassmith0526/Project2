@@ -1,7 +1,9 @@
-const {Sequlize, DataTypes} = require('sequelize');
-const sequelize = new Sequlize('greenacres_db', 'your_username', 'your_password', {
-    host: 'localhost',
-    dialect: 'mysql'
+const { Sequelize, DataTypes } = require('sequelize');
+require('dotenv').config();
+
+const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
+    host: process.env.DB_HOST,
+    dialect: process.env.DB_DIALECT
 });
 
 // clients model
@@ -77,3 +79,6 @@ sequelize.sync()
   .catch(err => {
     console.error('Error syncing the models:', err);
   });
+
+  module.exports = {
+    sequelize, Clients, Employees, Tasks, Jobs };
