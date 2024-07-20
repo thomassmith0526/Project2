@@ -7,13 +7,16 @@ class Task extends Model {}
 Task.init({
     id: {
         type: DataTypes.INTEGER,
-        primaryKey: true
+        primaryKey: true,
+        allowNull: false,
+        autoIncrement: true
       },
     name: {
-        type: DataTypes.STRING(100)
+        type: DataTypes.STRING(100),
+        allowNull: false
       },
     description: {
-        type: DataTypes.STRING(250)
+        type: DataTypes.STRING(250),
       }
 },{
     sequelize,
