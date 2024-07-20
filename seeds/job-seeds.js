@@ -3,6 +3,6 @@ const { Job } = require('../models');
 const jobData = [
 ];
 
-const jobClients = () => Category.bulkCreate(jobData);
+const jobClients = () => Job.bulkCreate(jobData);
 
 module.exports = jobClients;

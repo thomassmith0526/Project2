@@ -15,6 +15,6 @@ const taskData = [
   },
 ];
 
-const taskClients = () => Category.bulkCreate(taskData);
+const taskClients = () => Task.bulkCreate(taskData);
 
 module.exports = taskClients;
