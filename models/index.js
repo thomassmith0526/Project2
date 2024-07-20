@@ -3,12 +3,14 @@ const Employee = require('./Employee');
 // const Job = require('./Job');
 const Task = require('./task');
 
-// need to link tables together
+// need to link tables together to the jobs table,
 // one to one
 // many to one connections and stuffs
+// and then write seeds for jobs seeds
 
 module.exports = {
     Client,
     Employee, 
+    // Uncomment when jobs get done
     // Job, 
     Task}
