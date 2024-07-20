@@ -1,24 +1,26 @@
-const seedCategories = require('./category-seeds');
-const seedProducts = require('./product-seeds');
-const seedTags = require('./tag-seeds');
-const seedProductTags = require('./product-tag-seeds');
+const seedClient = require('./client-seeds');
+const seedEmployee = require('./employee-seeds');
+const seedTask = require('./task-seeds');
+const seedJob = require('./job-seeds');
 
 const sequelize = require('../config/connection');
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
   console.log('\n----- DATABASE SYNCED -----\n');
-  await seedCategories();
-  console.log('\n----- CATEGORIES SEEDED -----\n');
+  await seedClient();
+  console.log('\n----- Client SEEDED -----\n');
 
-  await seedProducts();
-  console.log('\n----- PRODUCTS SEEDED -----\n');
+  await seedEmployee();
+  console.log('\n----- Employee SEEDED -----\n');
 
-  await seedTags();
-  console.log('\n----- TAGS SEEDED -----\n');
+  await seedTask();
+  console.log('\n----- Task SEEDED -----\n');
 
-  await seedProductTags();
-  console.log('\n----- PRODUCT TAGS SEEDED -----\n');
+
+  //need to extablish in models.js relations and finish job-seeds.js before we uncomment
+  // await seedJob();
+  // console.log('\n----- Job Task SEEDED -----\n');
 
   process.exit(0);
 };

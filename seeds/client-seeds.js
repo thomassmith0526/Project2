@@ -23,6 +23,6 @@ const clientData = [
   }
 ];
 
-const seedClients = () => Category.bulkCreate(clientData);
+const seedClients = () => Client.bulkCreate(clientData);
 
 module.exports = seedClients;

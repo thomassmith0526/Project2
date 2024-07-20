@@ -19,6 +19,6 @@ const employeeData = [
   }
 ];
 
-const employeeClients = () => Category.bulkCreate(employeeData);
+const employeeClients = () => Employee.bulkCreate(employeeData);
 
 module.exports = employeeClients;
