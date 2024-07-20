@@ -2,8 +2,8 @@ const { Employee } = require('../models');
 
 const employeeData = [
   {
-    first_name: 'Hannah',
-    last_name: 'Finch'
+    first_name: 'Micah',
+    last_name: 'Mows'
   },
   {
     first_name: 'Tiff',
