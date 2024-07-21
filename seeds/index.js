@@ -19,8 +19,8 @@ const seedAll = async () => {
 
 
   //need to extablish in models.js relations and finish job-seeds.js before we uncomment
-  // await seedJob();
-  // console.log('\n----- Job Task SEEDED -----\n');
+  await seedJob();
+  console.log('\n----- Job Task SEEDED -----\n');
 
   process.exit(0);
 };
