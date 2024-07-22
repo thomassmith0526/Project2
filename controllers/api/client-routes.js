@@ -26,6 +26,7 @@ router.post('/', async (req, res) => {
         const clientData = await Client.create({
             first_name: req.body.first_name,
             last_name: req.body.last_name,
+            location: req.body.location,
         });
         res.status(200).json(clientData);
     } catch (err) {

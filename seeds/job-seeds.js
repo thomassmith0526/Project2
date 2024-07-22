@@ -3,7 +3,7 @@ const { Job, Employee } = require('../models');
 
 const jobData =[
     {
-        clint_id: '1',
+        client_id: '1',
         employee_id: '2',
         task_id: '3',
         date: '6/2/24',
@@ -11,7 +11,7 @@ const jobData =[
         comments: 'Green Acres has very professional employees and very quick getting the job done.'
     },
     {
-        clint_id: '3',
+        client_id: '3',
         employee_id: '2',
         task_id: '1',
         date:'9/26/23',
@@ -19,7 +19,7 @@ const jobData =[
         comments:'They were able to get the trees cut down off the roof and satellite dish just in time for the Jags game'
     },
     {
-        clint_id: '2',
+        client_id: '2',
         employee_id: '1',
         task_id: '3',
         date:'5/26/24',
@@ -27,7 +27,7 @@ const jobData =[
         comments:'Will NEVER call anyone else to get my lawn looking like new'
     },
     {
-        clint_id: '2',
+        client_id: '2',
         employee_id: '1',
         task_id: '2',
         date:'6/23/24',
