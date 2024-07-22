@@ -22,30 +22,22 @@ Job.init({
     employee_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        // references: {
-        //     model: 'employee',
-        //     key: 'id'
-        //   }
+        references: {
+            model: 'employee',
+            key: 'employee_id'
+          }
     },
     task_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        // references: {
-        //     model: 'task',
-        //     key: 'id'
-        //   }
+        references: {
+            model: 'task',
+            key: 'id'
+          }
     },
     date: {
         type: DataTypes.STRING(40),
         allowNull: false,
-    },
-    location: {
-        type: DataTypes.STRING(200),
-        allowNull: false,
-        // references: {
-        //     model: 'client',
-        //     key: 'location'
-        // }
     },
     comments: {
         type: DataTypes.STRING(200)
