@@ -17,7 +17,10 @@ Task.init({
       },
     description: {
         type: DataTypes.STRING(250),
-      }
+      },
+    price: {
+      type: DataTypes.DECIMAL
+    }
 },{
     sequelize,
     timestamps: false,
