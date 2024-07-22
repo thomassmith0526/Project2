@@ -16,15 +16,6 @@ Job.hasOne(Client, {
 Client.belongsTo(Job, {
     foreignKey: 'id'
 })
-//TESTING AREA
-// Client.belongsToMany(Task, {
-//     Through : {
-//         Model: Job,
-//         unique: false
-//     },
-//     as: "Clients_Tasks"
-//     // foreignKey: 'id'
-// })
 
 //Job/Employee Relations
 Job.hasOne(Employee, {
@@ -41,6 +32,12 @@ Job.hasOne(Task, {
 Task.belongsTo(Job, {
     foreignKey: 'id'
 })
+
+// Job.hasOne(client)
+
+// Job.hasMany(tasks)
+
+// Job.hasMany(employees)
 
 module.exports = {
     Client,
