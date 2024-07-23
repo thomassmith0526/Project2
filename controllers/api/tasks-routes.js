@@ -28,12 +28,12 @@ router.get('/:id', async (req, res) => {
 // post a new task 
 router.post('/', async (req, res) => {
     try {
-        const { name, description } = req.body;
-        if (!name || !description) {
-            res.status(400).json({ error: 'Name and description are required' });
+        const { name, description, price } = req.body;
+        if (!name || !description || !price) {
+            res.status(400).json({ error: 'Name, description, and price are required' });
             return;
         }
-        const taskData = await Task.create({ name, description });
+        const taskData = await Task.create({ name, description, price });
         res.status(201).json(taskData);
     } catch (err) {
         res.status(500).json({ error: 'Internal Server Error' });
