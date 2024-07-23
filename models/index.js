@@ -10,24 +10,47 @@ const Task = require('./task');
 // and then write seeds for jobs seeds
 
 // Job/Client Relations -- I think this is done
-Job.hasOne(Client, {
-    foreignKey: 'id'
-})
-Client.belongsTo(Job, {
-    foreignKey: 'id'
+
+Client.hasOne(Job,{
+    foreignKey: 'client_id'
 })
 
-//
-Job.hasMany(Employee, { 
+Job.belongsTo(Client,{
+    foreignKey: 'client_id'
+})
+
+
+// Job/Employee relations : NEED TO BE ONE TO MANY HELP
+Employee.hasOne(Job,{
     foreignKey: 'employee_id'
 })
 
-//Job/Task Relations
-Job.hasMany(Task, {
-    foreignKey: 'id'
-
+Job.belongsTo(Employee,{
+    foreignKey: 'employee_id'
 })
 
+/*
+Job.hasMany(Employee, { 
+    foreignKey: 'employee_id'
+})
+*/
+
+
+//Job/Task Relations
+
+Task.hasOne(Job,{
+    // foreignKey: 'task_id:'
+})
+
+Job.belongsTo(Task,{
+    // foreignKey: 'task_id:'
+})
+
+/*
+Job.hasMany(Task, {
+    // foreignKey: 'id'
+})
+*/
 module.exports = {
     Client,
     Employee, 

@@ -1,6 +1,6 @@
 async function getData() {
     // localhost/api/employees
-    const url = "http://localhost:3001/api/employees";
+    const url = "http://localhost:3001/api/jobs";
 
     try {
       const response = await fetch(url);
@@ -19,9 +19,6 @@ async function getData() {
   
 function useData(data) {
     console.log(data);
-
-
-
 }
 
 

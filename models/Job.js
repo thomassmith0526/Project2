@@ -16,7 +16,7 @@ Job.init({
         allowNull: false,
         references: {
             model: 'client',
-            keys: 'id'
+            key: 'id'
           }
     },
     employee_id: {
