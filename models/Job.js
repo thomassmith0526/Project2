@@ -24,7 +24,7 @@ Job.init({
         allowNull: false,
         references: {
             model: 'employee',
-            keys: 'id'
+            key: 'employee_id'
           }
     },
     task_id: {
@@ -32,23 +32,21 @@ Job.init({
         allowNull: false,
         references: {
             model: 'task',
-            keys: 'id'
+            key: 'id'
           }
     },
     date: {
-        type: DataTypes.STRING(40),
+        type: DataTypes.STRING,
         allowNull: false,
     },
-    location: {
-        type: DataTypes.STRING(200),
-        allowNull: false,
-        references: {
-            model: 'client',
-            key: 'location'
-        }
-    },
+
     comments: {
-        type: DataTypes.STRING(200)
+        type: DataTypes.STRING(200),
+        allowNull: true,
+    },
+
+    isDone: {
+        type: DataTypes.BOOLEAN,
     }
 },{
     sequelize,
