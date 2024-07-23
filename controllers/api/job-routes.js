@@ -1,8 +1,12 @@
 const router = require('express').Router();
-const Job = require('../../models/job');
+const {Job, Client, Employee, Task} = require('../../models');
 
 router.get('/', async (req, res) => {
-    const jobData = await Job.findAll().catch((err) => {
+    const jobData = await Job.findAll({
+        include:[{model: Client}, {model: Employee}, {model: Task}]
+    }
+    )
+    .catch((err) => {
         res.json(err);
     })
     res.json(jobData)
