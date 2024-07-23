@@ -24,7 +24,7 @@ Job.init({
         allowNull: false,
         references: {
             model: 'employee',
-            keys: 'id'
+            key: 'employee_id'
           }
     },
     task_id: {
@@ -32,7 +32,7 @@ Job.init({
         allowNull: false,
         references: {
             model: 'task',
-            keys: 'id'
+            key: 'id'
           }
     },
     date: {
