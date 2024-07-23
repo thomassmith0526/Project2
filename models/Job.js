@@ -41,7 +41,7 @@ Job.init({
     },
 
     comments: {
-        type: DataTypes.VARCHAR(200),
+        type: DataTypes.STRING(200),
         allowNull: true,
     },
 
