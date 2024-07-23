@@ -8,12 +8,12 @@
     "seed": "node seeds/index.js",
     "start": "node server.js",
     "dev": "nodemon server.js"
-
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "add-to-calendar-button": "^2.6.18",
     "dotenv": "^16.4.5",
     "eslint": "^9.7.0",
     "express": "^4.19.2",
