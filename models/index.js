@@ -11,46 +11,39 @@ const Task = require('./task');
 
 // Job/Client Relations -- I think this is done
 
-Client.hasOne(Job,{
-    foreignKey: 'client_id'
-})
-
-Job.belongsTo(Client,{
-    foreignKey: 'client_id'
-})
+Client.belongsTo(Job, {foreignKey: 'id'})
+Job.hasOne(Client, {foreignKey: 'id'})
 
 
 // Job/Employee relations : NEED TO BE ONE TO MANY HELP
-Employee.hasOne(Job,{
-    foreignKey: 'employee_id'
-})
 
-Job.belongsTo(Employee,{
-    foreignKey: 'employee_id'
-})
+Job.hasMany(Employee,{foreignKey: 'employee_id', sourceKey: 'employee_id'})
+Employee.belongsTo(Job, {foreignKey: 'employee_id'})
+// Job.belongsToMany(Employee,{
+//     through: 'Employee_Job',
+//     foreignKey: 'job_id'
+// })
 
-/*
-Job.hasMany(Employee, { 
-    foreignKey: 'employee_id'
-})
-*/
+// Employee.belongsToMany(Job, {
+//     through: 'Employee_Job',
+//     foreignKey: 'employee_employee_id'
+// })
+
+// Task.belongsToMany(Task, {
+//     through: Job,
+//     as: 'client'
+// })
+
 
 
 //Job/Task Relations
-
-Task.hasOne(Job,{
+// Task.hasOne(Job,{
     // foreignKey: 'task_id:'
-})
-
-Job.belongsTo(Task,{
+// })
+// Job.belongsTo(Task,{
     // foreignKey: 'task_id:'
-})
+// })
 
-/*
-Job.hasMany(Task, {
-    // foreignKey: 'id'
-})
-*/
 module.exports = {
     Client,
     Employee, 

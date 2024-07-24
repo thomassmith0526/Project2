@@ -3,9 +3,15 @@ const {Job, Client, Employee, Task} = require('../../models');
 
 router.get('/', async (req, res) => {
     const jobData = await Job.findAll({
-        include:[{model: Client}, {model: Employee}, {model: Task}]
-    }
-    )
+        include:[
+            {
+                model: Client,
+                attributes: ['first_name', 'last_name', 'location']
+            },
+             {model: Employee},
+            //   {model: Task}
+            ]
+    })
     .catch((err) => {
         res.json(err);
     })
