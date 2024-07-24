@@ -1,0 +1,32 @@
+{{#each jobs as |job| }}
+<Div style="border-style: solid; margin-bottom: 5px";>
+  <ul>id: {{job.id}}</ul>
+  <ul>Client:{{job.client.last_name}}, {{job.client.first_name}}</ul>
+  <ul>Employee:{{job.employees.[1].last_name}}</ul> 
+  <ul>Task:{{job.task_id}}</ul>
+  <ul>Date:{{job.date}}</ul>
+  <ul>Comments:{{job.comments}}</ul>
+  <ul>isDone:{{job.isDone}}</ul>
+
+</Div>
+{{/each}}
+
+
+<add-to-calendar-button
+{{!-- client name from client table --}}
+  name="Title" 
+  {{!-- don't touch --}}
+  options="'Google'" 
+  {{!-- Address from client table --}}
+  location="World Wide Web"
+  {{!-- date from job table --}}
+  startDate="2024-07-26"
+  {{!-- same as start date --}}
+  endDate="2024-07-26"
+  {{!-- ALL DAY --}}
+  startTime="10:15"
+  {{!-- ALL DAY --}}
+  endTime="23:30"
+  {{!-- I DON"T CARE.... FLORIDA ???? --}}
+  timeZone="America/Los_Angeles"
+></add-to-calendar-button>
