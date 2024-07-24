@@ -27,14 +27,14 @@ Job.init({
             key: 'employee_id'
           }
     },
-    task_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        references: {
-            model: 'task',
-            key: 'id'
-          }
-    },
+    // task_id: [{
+    //     type: DataTypes.INTEGER,
+    //     allowNull: false,
+    //     references: {
+    //         model: 'task',
+    //         key: 'id'
+    //       }
+    // }],
     date: {
         type: DataTypes.STRING,
         allowNull: false,

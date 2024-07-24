@@ -3,6 +3,7 @@ const Client = require('./Client');
 const Employee = require('./Employee');
 const Job = require('./Job');
 const Task = require('./task');
+const JobTask = require('./JobTask')
 
 // need to link tables together to the jobs table,
 // one to one
@@ -38,21 +39,20 @@ Job.hasMany(Employee, {
 
 //Job/Task Relations
 
-Task.hasOne(Job,{
-    // foreignKey: 'task_id:'
+Task.belongsToMany(Job,{ 
+    through: 'JobTask',
+    foreignKey: 'task_id'
 })
 
-Job.belongsTo(Task,{
-    // foreignKey: 'task_id:'
+Job.belongsToMany(Task,{
+    through:'JobTask',
+    foreignKey: 'job_id'
 })
 
-/*
-Job.hasMany(Task, {
-    // foreignKey: 'id'
-})
-*/
+
 module.exports = {
     Client,
     Employee, 
     Job, 
-    Task}
+    Task,
+    JobTask}
