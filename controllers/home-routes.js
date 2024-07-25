@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
     const jobs =  jobData.map((job) => job.get({ plain:true}))
     // res.json(employeeData)
     // console.log(jobs)
-    res.render('test', { jobs })
+    res.render('main', { jobs })
 })
 
 router.get('/client', async (req, res) => {
