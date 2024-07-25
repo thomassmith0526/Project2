@@ -1,9 +1,9 @@
 :root{
     /* background color */
-    --bg-color: black;
+    --bg-color: #2d313a;
     /* pretty much everything else */
-    --default-color: white;
-    --main-color: green;
+    --default-color:#FEF3E2;
+    --main-color: #2e4930;
 }
 
 *{
