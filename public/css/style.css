@@ -16,6 +16,12 @@ html {
     /* background-color: var(--main-color); */
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -27,7 +33,7 @@ header {
 }
 main {
     display: flex;
-    min-height: 80%;
+    min-height: 80vh;
 }
 
 
@@ -35,7 +41,7 @@ main {
     width: 20%;
     background-color: var(--main-color);
     
-    min-height: 80%;
+    /* min-height: vh */
 
 
 }
@@ -61,18 +67,13 @@ main {
 }
 
 
-footer {
+footer div{
     /* padding: 5px; */
-    border-top: var(--border);
 
-    
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    height: 10%;
-    padding: 10px 0;
-    text-align: center;
-    
+    /* margin-top: auto; */
+    background-color: var(--main-color);
+    min-height: 20vh;
+
 
 }
 /* inside of test.handlebars */
