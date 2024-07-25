@@ -16,6 +16,16 @@ const taskData = [
     description: 'Mowing STUFFFFS',
     price: 50.00
   },
+  {
+    name: 'Planting flowers',
+    description: 'planting flowers around the house and yard',
+    price: 200.00
+  },
+  {
+    name: 'Watering',
+    description: 'watering grass, trees, flowers',
+    price: 50.00
+  },
 ];
 
 const taskClients = () => Task.bulkCreate(taskData);
