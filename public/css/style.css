@@ -1,0 +1,93 @@
+:root{
+    /* background color */
+    --bg-color: #2d313a;
+    /* pretty much everything else */
+    --default-color:#FEF3E2;
+    --main-color: #2e4930;
+}
+
+*{
+    margin:0;
+    padding:0;
+    background-color: var(--bg-color);
+    color: var(--default-color);
+}
+html {
+    /* background-color: var(--main-color); */
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--main-color);
+    height: 20%;
+    /* color: #ffffff; */
+}
+main {
+    display: flex;
+    min-height: 80vh;
+}
+
+
+#nav-bar {
+    width: 20%;
+    background-color: var(--main-color);
+    
+    /* min-height: vh */
+
+
+}
+#nav-bar section {
+    background-color: var(--main-color);
+}
+
+#nav-bar section ul {
+    text-align: right;
+    margin-right: 10px;
+    font-size: 150%;
+    padding-right: 10px;
+    border: solid;
+    
+    /* background-color: var(--main-color); */
+
+    /* color: var(--textColor);
+    border-color: var(--textColor); */
+}
+
+#hb-body {
+    width: 80%
+}
+
+
+footer div{
+    /* padding: 5px; */
+
+    /* margin-top: auto; */
+    background-color: var(--main-color);
+    min-height: 20vh;
+
+
+}
+/* inside of test.handlebars */
+.job-column {
+    min-width: 30%;
+    width: 33.3%;
+    color: aqua;
+    display: block;
+    
+}
+
+.job-field {
+    /* justify-content: space-evenly; */
+    border-style: solid; 
+    margin-bottom: 5px; 
+    display:flex; 
+}

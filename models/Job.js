@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes} = require('sequelize');
 
 const sequelize = require('../config/connection.js');
 
@@ -16,7 +16,7 @@ Job.init({
         allowNull: false,
         references: {
             model: 'client',
-            keys: 'id'
+            key: 'id'
           }
     },
     employee_id: {

@@ -5,17 +5,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Green Acres</title>
-  {{!-- <link rel="stylesheet" href="/css/jass.css"> --}}
+  <link rel="stylesheet" href="/css/style.css">
   <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
 
 </head>
-
 <body>
 
-<h1> Hello world </h1>
+<header> 
+<h1><a href="/" style="text-decoration: none;">Green Acres Logo Goes Here</a></h1>
+</header>
 
-{{{body}}}
-
+<main>
+  <nav id="nav-bar">
+    <section>
+      <ul>
+      <a href="/client">Clients</a>
+      </ul>    
+      <ul>
+      Employees
+      </ul>    
+      <ul>
+      Tasks
+      </ul>    
+      <ul>
+      Jobs
+      </ul>
+    </section>
+  </nav>
+  <section id="hb-body">
+    {{{body}}}
+  </section>
+</main>
+<footer>
+  <div>
+    PUT STUFF HERE
+  </div>
+</footer>
 </body>
  <script src="/js/calenderApi.js"></script>
 </html>

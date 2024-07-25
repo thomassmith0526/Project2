@@ -1,19 +1,31 @@
 
 const router = require('express').Router();
-const Employee = require('../models/Employee');
-const Task = require('../models/task');
+const {Employee, Job, Client, Task} = require('../models');
 
 router.get('/', async (req, res) => {
-    const employeeData = await Employee.findAll()
-    // const employees =  employeeData.map((employee) => employee.get({ plain:true}))
+    const jobData = await Job.findAll({
+        include:[
+            {
+                model: Client,
+                attributes: ['first_name', 'last_name', 'location']
+            },
+             {model: Employee},
+            //   {model: Task}
+            ]
+    })
+    const jobs =  jobData.map((job) => job.get({ plain:true}))
     // res.json(employeeData)
-    res.render('all')
+    // console.log(jobs)
+    res.render('main', { jobs })
 })
 
-router.get('/add-client', async (req, res) => {
+router.get('/client', async (req, res) => {
     const taskData = await Task.findAll()
-    const tasks = taskData.map((task) => task.get({ plain:true}))
-    res.render('client', {tasks})
+    const tasks = taskData.map((task) => task.get({ plain: true}))
+
+    res.render('client',  {tasks} )
 })
 
+
+ 
 module.exports = router;
