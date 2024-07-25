@@ -17,8 +17,15 @@ Job.hasOne(Client, {foreignKey: 'id'})
 
 // Job/Employee relations : NEED TO BE ONE TO MANY HELP
 
-Job.hasMany(Employee,{foreignKey: 'employee_id', sourceKey: 'employee_id'})
-Employee.belongsTo(Job, {foreignKey: 'employee_id'})
+Job.belongsTo(Employee,{
+    foreignKey: 'employee_id'
+})
+Employee.hasOne(Job, {
+    foreignKey: 'employee_id'
+})
+
+// Job.hasMany(Employee,{foreignKey: 'employee_id', sourceKey: 'employee_id'})
+// Employee.belongsTo(Job, {foreignKey: 'employee_id'})
 // Job.belongsToMany(Employee,{
 //     through: 'Employee_Job',
 //     foreignKey: 'job_id'
