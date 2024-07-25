@@ -1,8 +1,8 @@
-{{#each jobs as |job| }}
+{{#each jobs as |job| }} {{@index}}:{{i}}
 <Div style="border-style: solid; margin-bottom: 5px;" class="JobField">
-  <ul>id: {{job.id}}</ul>
+  <ul>Job Id: {{job.id}}</ul>
   <ul>Client:{{job.client.last_name}}, {{job.client.first_name}}</ul>
-  <ul>Employee:{{job.employees.[1].last_name}}</ul> 
+  <ul>Employee:<b>MAKE THIS WORK</b></ul> 
   <ul>Task:{{job.task_id}}</ul>
   <ul>Date:{{job.date}}</ul>
   <ul>Comments:{{job.comments}}</ul>

@@ -1,6 +1,11 @@
+:root{
+    --bg-color: black;
+    --default-color: white
+}
+
 *{
-    background-color: black;
-    color: white;
+    background-color: var(--bg-color);
+    color: var(--default-color);
 }
 
 header {
@@ -8,8 +13,8 @@ header {
     justify-content: space-between;
 
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: black;
-    color: #ffffff;
+    /* background-color: black; */
+    /* color: #ffffff; */
 }
 main {
     display: flex;
