@@ -5,10 +5,10 @@ router.get('/', async (req, res) => {
     const employeeData = await Employee.findAll().catch((err) => {
         res.json(err);
     })
-    res.json(employeeData)
+    res.json(employeeData);
     // const employees = employeeData.map((employee) => employee.get({ plain: true }));
-    // res.render('', {employees})
-})
+    // res.render('jobs', {employees});
+});
 
 router.get('/:id', async (req, res) => {
     try {
@@ -19,7 +19,7 @@ router.get('/:id', async (req, res) => {
         }
         res.json(employeeData)
         // const employee = employeeData.get({ plain: true});
-        // res.render('',employee);
+        // res.render('jobs', employee);
     } catch (err) {
         res.status(500).json(err);
     }
