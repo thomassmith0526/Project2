@@ -19,11 +19,13 @@ router.get('/', async (req, res) => {
     res.render('test', { jobs })
 })
 
-router.get('/micah', async (req, res) => {
+router.get('/addclient', async (req, res) => {
     const taskData = await Task.findAll()
     const tasks = taskData.map((task) => task.get({ plain: true}))
 
-    res.render('client', { tasks })
+    res.render('all', { tasks })
 })
 
+
+ 
 module.exports = router;
