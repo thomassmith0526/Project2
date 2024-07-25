@@ -11,11 +11,17 @@ header {
     background-color: black;
     color: #ffffff;
 }
-
-#nav-bar {
+main {
     display: flex;
 }
 
-#nav-bar ul {
+#nav-bar {
     width: 20%;
+}
+
+#nav-bar section {
+}
+
+main section {
+    width: 80%
 }
