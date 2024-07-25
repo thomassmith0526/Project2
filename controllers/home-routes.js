@@ -19,11 +19,11 @@ router.get('/', async (req, res) => {
     res.render('test', { jobs })
 })
 
-router.get('/addclient', async (req, res) => {
+router.get('/pikachu', async (req, res) => {
     const taskData = await Task.findAll()
     const tasks = taskData.map((task) => task.get({ plain: true}))
 
-    res.render('all', { tasks })
+    res.render('all')
 })
 
 

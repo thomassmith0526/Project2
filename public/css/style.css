@@ -1,11 +1,19 @@
 :root{
+    /* background color */
     --bg-color: black;
-    --default-color: white
+    /* pretty much everything else */
+    --default-color: white;
+    --main-color: green;
 }
 
 *{
+    margin:0;
+    padding:0;
     background-color: var(--bg-color);
     color: var(--default-color);
+}
+html {
+    /* background-color: var(--main-color); */
 }
 
 header {
@@ -13,27 +21,53 @@ header {
     justify-content: space-between;
 
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    /* background-color: black; */
+    background-color: var(--main-color);
+    height: 20%;
     /* color: #ffffff; */
 }
 main {
     display: flex;
 }
 
+
 #nav-bar {
     width: 20%;
+    background-color: var(--main-color);
+
+
+}
+#nav-bar section {
+    background-color: var(--main-color);
 }
 
-#nav-bar section {
+#nav-bar section ul {
+    text-align: right;
+    margin-right: 10px;
+    font-size: 150%;
+    padding-right: 10px;
+    border: solid;
+    
+    /* background-color: var(--main-color); */
+
+    /* color: var(--textColor);
+    border-color: var(--textColor); */
 }
 
 main section {
     width: 80%
 }
 
-.job-column1 ul{
-    /* width: 30%; */
-}
-.job-column2 ul{
-    /* width: 30%; */
+
+footer {
+    /* padding: 5px; */
+    border-top: var(--border);
+
+    
+    /* position: relative; */
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    padding: 10px 0;
+    
+
 }
