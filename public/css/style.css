@@ -30,3 +30,10 @@ main {
 main section {
     width: 80%
 }
+
+.job-column1 ul{
+    /* width: 30%; */
+}
+.job-column2 ul{
+    /* width: 30%; */
+}
