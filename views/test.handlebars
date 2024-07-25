@@ -2,18 +2,18 @@
 <h1 style="text-align: center; color:blueviolet; border: solid"> JOB FORM GOES HERE TO ADD A JOB </h1>
 
 {{#each jobs as |job| }}
-<Div style="border-style: solid; margin-bottom: 5px; display:flex;" class="JobField">
-  <section class="job-column1">  
+<Div class="job-field">
+  <section class="job-column">  
     <ul>Job Id: {{job.id}}</ul>
     <ul>Client:{{job.client.last_name}}, {{job.client.first_name}}</ul>
     <ul>Employee:<b style="color: red">MAKE THIS WORK</b></ul> 
   </section>
-  <section class="job-column2">  
+  <section class="job-column">  
     <ul>Task:{{job.task_id}}</ul>
     <ul>Date:{{job.date}}</ul>
     <ul>Comments:{{job.comments}}</ul>
   </section>
-  <section>
+  <section class="job-column">
     <ul>isDone:{{job.isDone}}</ul>
     <add-to-calendar-button
       name="Client:{{job.client.last_name}}, {{job.client.first_name}}"
