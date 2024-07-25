@@ -2,3 +2,20 @@
     background-color: black;
     color: white;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: black;
+    color: #ffffff;
+}
+
+#nav-bar {
+    display: flex;
+}
+
+#nav-bar ul {
+    width: 20%;
+}
