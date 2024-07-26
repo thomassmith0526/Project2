@@ -12,7 +12,7 @@
 
   <div class="form-group">
     <label for="employee_id">Employee ID</label>
-    <select class="'form-select" id="'employee_id" name="employee"></select>
+    <select class="form-select" id="employee_id" name="employee">
     {{#each employees as |employee|}}
     <option value="{{employee.id}}">{{employee.id}}</option>
     {{/each}}
@@ -38,16 +38,6 @@
     <input class="from-group" type="text" id="comments" placeholder="gate code, dogs, type of flowers." />
   </div>
 
-  {{!-- <script id="template" type="text/x-handlebars-template">
-    <label for="done">Complete?</label>
-     <input class="from-group" type="checkbox" id="done" />
-     {{if checkbox}}
-      <p>Checkbox is selected / true </p>
-     {{else}}
-      <p>Checkbox is not selected / false </p>
-     {{/if}}
-  </script>
-  <div id="output"></div> --}}
   <button class="btn btn-primary" type="submit">Submit</button>
   </div>
 </form>
