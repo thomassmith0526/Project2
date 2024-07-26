@@ -91,3 +91,17 @@ footer div{
     margin-bottom: 5px; 
     display:flex; 
 }
+
+.client-column {
+    min-width: 30%;
+    width: 33.3%;
+    color: aqua;
+    display: block;
+    
+}
+
+.client-field {
+    border-style: solid; 
+    margin-bottom: 5px; 
+    display:flex; 
+}

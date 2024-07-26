@@ -27,6 +27,21 @@
   </div>
 </form>
 
+{{#each clients as |client|}}
+    <div class="client-field">
+        <section class="client-column">
+            <ul>Client Id: {{client.id}}</ul>
+        </section>
+        <section class="client-column">
+            <ul>First Name: {{client.first_name}}</ul>
+            <ul>Last Name: {{client.last_name}}</ul>
+        </section>
+        <section class="client-column">
+            <ul>Location: {{client.location}}</ul>
+        </section> 
+    </div>
+{{/each}}
+
 <script src="/js/index.js"></script>
 
 
