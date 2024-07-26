@@ -20,32 +20,8 @@ Job.hasOne(Client, {foreignKey: 'id'})
 Job.belongsTo(Employee,{foreignKey: 'employee_id'})
 Employee.hasOne(Job, {foreignKey: 'employee_id'})
 
-// Job.hasMany(Employee,{foreignKey: 'employee_id', sourceKey: 'employee_id'})
-// Employee.belongsTo(Job, {foreignKey: 'employee_id'})
-// Job.belongsToMany(Employee,{
-//     through: 'Employee_Job',
-//     foreignKey: 'job_id'
-// })
-
-// Employee.belongsToMany(Job, {
-//     through: 'Employee_Job',
-//     foreignKey: 'employee_employee_id'
-// })
-
-// Task.belongsToMany(Task, {
-//     through: Job,
-//     as: 'client'
-// })
-
-
-
-//Job/Task Relations
-// Task.hasOne(Job,{
-    // foreignKey: 'task_id:'
-// })
-// Job.belongsTo(Task,{
-    // foreignKey: 'task_id:'
-// })
+Job.belongsTo(Task,{foreignKey: 'employee_id'})
+Task.hasOne(Job, {foreignKey: 'employee_id'})
 
 module.exports = {
     Client,

@@ -51,3 +51,31 @@
   <button class="btn btn-primary" type="submit">Submit</button>
   </div>
 </form>
+
+{{#each jobs as |job| }}
+<Div class="job-field">
+  <section class="job-column">  
+    <ul>Job Id: {{job.id}}</ul>
+    <ul>Client:{{job.client.last_name}}, {{job.client.first_name}}</ul>
+    <ul>Employee:{{job.employee.last_name}}</ul> 
+  </section>
+  <section class="job-column">  
+    <ul>Task:{{job.task_id}}</ul>
+    <ul>Date:{{job.date}}</ul>
+    <ul>Comments:{{job.comments}}</ul>
+  </section>
+  <section class="job-column">
+    <ul>isDone:{{job.isDone}}</ul>
+    <add-to-calendar-button
+      name="Client:{{job.client.last_name}}, {{job.client.first_name}}"
+      options="'Google'"
+      location="{{job.client.location}}"
+      startDate="{{job.date}}"
+      endDate="{{job.date}}"
+      startTime="08:00"
+      endTime="18:00"
+      timeZone="America/Los_Angeles"
+    ></add-to-calendar-button>
+  </section>  
+</Div>
+{{/each}}

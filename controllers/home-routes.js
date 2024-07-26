@@ -10,13 +10,13 @@ router.get('/', async (req, res) => {
                 attributes: ['first_name', 'last_name', 'location']
             },
              {model: Employee},
-            //   {model: Task}
+              {model: Task}
             ]
     })
     const jobs =  jobData.map((job) => job.get({ plain:true}))
     // res.json(employeeData)
     // console.log(jobs)
-    res.render('main', { jobs })
+    res.render('all', { jobs })
 })
 
 router.get('/client', async (req, res) => {
@@ -25,6 +25,7 @@ router.get('/client', async (req, res) => {
 
     res.render('client',  {tasks} )
 })
+
 
 
  
