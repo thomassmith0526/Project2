@@ -6,8 +6,8 @@ router.get('/', async (req, res) => {
         res.json(err);
     })
     res.json(employeeData)
-    // const employees = employeeData.map((employee) => employee.get({ plain: true }));
-    // res.render('', {employees})
+    const employees = employeeData.map((employee) => employee.get({ plain: true }));
+    res.render('employee', {employees})
 })
 
 router.get('/:id', async (req, res) => {
@@ -18,8 +18,8 @@ router.get('/:id', async (req, res) => {
             return;
         }
         res.json(employeeData)
-        // const employee = employeeData.get({ plain: true});
-        // res.render('',employee);
+        const employee = employeeData.get({ plain: true});
+        res.render('employee', employee);
     } catch (err) {
         res.status(500).json(err);
     }

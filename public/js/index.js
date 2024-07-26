@@ -39,6 +39,8 @@ async function newFormHandler(event) {
     //     alert('Failed to add Task')
     // }
 }
+
+
 addEventListener('submit', newFormHandler)
 document.querySelector('.form-group')
     
