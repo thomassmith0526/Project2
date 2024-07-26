@@ -42,8 +42,7 @@ async function newFormHandler(event) {
 addEventListener('submit', newFormHandler)
 document.querySelector('.form-group')
     
-    
-    console.log('ahahahahaahah')
+
 
 // const checkbox = document.getElementById('done');
 // checkbox.addEventListener('change', function(){
