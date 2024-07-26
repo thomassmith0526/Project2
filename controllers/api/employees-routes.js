@@ -19,7 +19,8 @@ router.get('/:id', async (req, res) => {
         }
         res.json(employeeData)
         const employee = employeeData.get({ plain: true});
-        res.render('employee', employee);
+        // res.render('employee', employee);
+        return employee;
     } catch (err) {
         res.status(500).json(err);
     }
