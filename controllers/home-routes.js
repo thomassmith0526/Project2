@@ -10,10 +10,9 @@ router.get('/', async (req, res) => {
                 attributes: ['first_name', 'last_name', 'location']
             },
              {model: Employee},
-            //   {model: Task}
+              {model: Task}
             ]
     })
-    // const jobs =  jobData.map((job) => job.get({ plain:true}))
     const taskData = await Task.findAll()
     const employeeData = await Employee.findAll()
     const clientData = await Client.findAll()
@@ -21,10 +20,10 @@ router.get('/', async (req, res) => {
     const tasks = taskData.map((task) => task.get({ plain: true}))
     const employees = employeeData.map((employee) => employee.get({ plain: true}))
     const clients = clientData.map((client) => client.get({plain:true}))
-    res.render('main',{jobs,tasks, employees, clients})
+    res.render('all',{jobs,tasks, employees, clients})
     // res.json(employeeData)
     // console.log(jobs)
-    res.render('main', { jobs })
+    res.render('all', { jobs })
 })
 
 router.get('/client', async (req, res) => {
@@ -34,16 +33,16 @@ router.get('/client', async (req, res) => {
     res.render('client',  {tasks} )
 })
 
-router.get('/', async (req,res) =>{
-    const jobData = await Job.findAll()
-    const taskData = await Task.findAll()
-    const employeeData = await Employee.findAll()
-    const clientData = await Client.findAll()
-    const jobs = jobData.map((job) => job.get({ plain: true}))
-    const tasks = taskData.map((task) => task.get({ plain: true}))
-    const employees = employeeData.map((employee) => employee.get({ plain: true}))
-    const clients = clientData.map((client) => client.get({plain:true}))
-    res.render('main',{jobs,tasks, employees, clients})
-})
+// router.get('/', async (req,res) =>{
+//     const jobData = await Job.findAll()
+//     const taskData = await Task.findAll()
+//     const employeeData = await Employee.findAll()
+//     const clientData = await Client.findAll()
+//     const jobs = jobData.map((job) => job.get({ plain: true}))
+//     const tasks = taskData.map((task) => task.get({ plain: true}))
+//     const employees = employeeData.map((employee) => employee.get({ plain: true}))
+//     const clients = clientData.map((client) => client.get({plain:true}))
+//     res.render('all',{jobs,tasks, employees, clients})
+// })
  
 module.exports = router;

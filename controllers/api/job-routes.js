@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
                 attributes: ['first_name', 'last_name', 'location']
             },
              {model: Employee},
-            //   {model: Task}
+              {model: Task}
             ]
     })
     .catch((err) => {
