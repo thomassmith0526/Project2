@@ -8,31 +8,36 @@ async function newFormHandler(event) {
     const location = document.getElementById('location').value;
     const task = document.getElementById('task').value
 
-    const response = await fetch(`api/client`, {
+    const response = await fetch(`api/clients`, {
         method: 'POST',
         body: JSON.stringify({
             first_name,
             last_name,
             location,
         }),
-      
+        headers: {
+            'Content-Type': 'application/json',
+          },
     });
-    if (response.ok) {
-        document.location.replace('/');
-    } else {
-        alert('Failed to add Client')
-    }
-    const responseTask = await fetch(`api/jobs`, {
-        method: 'POST',
-        body: JSON.stringify({
-            task
-        }),
-    });
-    if(responseTask.ok) {
-        document.location.replace('/');
-    } else {
-        alert('Failed to add Task')
-    }
+    // if (response.ok) {
+    //     document.location.replace('/');
+    // } else {
+    //     alert('Failed to add Client')
+    // }
+    // const responseTask = await fetch(`/api/jobs`, {
+    //     method: 'POST',
+    //     body: JSON.stringify({
+    //         task
+    //     }),
+    //     headers: {
+    //         'Content-Type': 'application/json',
+    //       },
+    // });
+    // if(responseTask.ok) {
+    //     document.location.replace('/');
+    // } else {
+    //     alert('Failed to add Task')
+    // }
 }
 addEventListener('submit', newFormHandler)
 document.querySelector('.form-group')
