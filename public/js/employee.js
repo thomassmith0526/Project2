@@ -60,17 +60,20 @@ async function editor(event) {
     const first_name = document.getElementById('first_name').value;
     const last_name = document.getElementById('last_name').value;
 
-    await fetch(`api/employees/${id}`, 
-        {method: 'PUT',
-        body: JSON.stringify({
-            first_name, last_name,
-        }),
-        headers: {
-            'Content-Type': 'application/json' 
-        },
-        },
-    );
-
+    if (first_name == "" || last_name == "") {
+        window.alert("Please, input required fields before adding employee");
+    } else {
+        await fetch(`api/employees/${id}`, 
+            {method: 'PUT',
+            body: JSON.stringify({
+                first_name, last_name,
+            }),
+            headers: {
+                'Content-Type': 'application/json' 
+            },
+            },
+        );
+    }
 }
 
 submit.addEventListener('click', employeeHandler);
