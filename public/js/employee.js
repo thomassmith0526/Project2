@@ -29,15 +29,13 @@ async function employeeHandler(event) {
 async function searcher(event) {
     event.preventDefault();
     const id = document.getElementById('selection').value;
-    const employees = await fetch(`/api/employees`).then((response) => {return response.JSON});
-    
-    console.log(employees);
+    const employees = await fetch(`/api/employees`).then((response) => {return response.json()});
 
     employees.forEach((employee) => 
-        {if (Number(employee.employee_id) == value) {
-            document.getElementById('ID').innerHTML = employee.employee_id;
-            document.getElementById('First name').innerHTML = employee.first_name;
-            document.getElementById('Last name').innerHTML = employee.last_name;
+        {if (Number(employee.employee_id) == id) {
+            document.getElementById('ID').innerHTML = `ID: ${employee.employee_id}/`;
+            document.getElementById('First name').innerHTML = `First name: ${employee.first_name}/`;
+            document.getElementById('Last name').innerHTML = `Last name: ${employee.last_name}`;
         }}
     );
 }
@@ -45,14 +43,20 @@ async function searcher(event) {
 async function destroyer(event) {
     event.preventDefault();
     const id = document.getElementById('selection').value;
+    await fetch(`api/employees/${id}`, 
+        {method: 'DELETE'},
+    );
+    document.location.replace('/employee');
 }
 
 async function editor(event) {
     event.preventDefault();
     const id = document.getElementById('selection').value;
+
+
 }
 
 submit.addEventListener('click', employeeHandler);
 search.addEventListener('click', searcher);
-del.addEventListener('click', employeeHandler);
+del.addEventListener('click', destroyer);
 edit.addEventListener('click', employeeHandler);

@@ -19,8 +19,7 @@ router.get('/:id', async (req, res) => {
         }
         res.json(employeeData)
         const employee = employeeData.get({ plain: true});
-        // res.render('employee', employee);
-        return employee;
+        res.render('employee', employee);
     } catch (err) {
         res.status(500).json(err);
     }
@@ -37,5 +36,19 @@ router.post('/', async (req, res) => {
         res.status(400).json(err);
     }
 });
+
+router.delete('/:id', async (req, res) => {
+    try {
+        const employee = await Employee.destroy({
+            where: {
+              employee_id: req.params.id,
+            },
+        });
+        res.status(200).json(employee);
+    } catch (err) {
+        res.status(400).json(err);
+    }
+    console.log('request completed');
+})
 
 module.exports = router;
