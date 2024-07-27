@@ -9,6 +9,7 @@ async function employeeHandler(event) {
     
     const first_name = document.getElementById('first_name').value;
     const last_name = document.getElementById('last_name').value;
+    const employee_id = document.getElementById('selection').length + 1;
 
     if (first_name == "" || last_name == "") {
         window.alert("Please, input required fields before adding employee");
@@ -16,6 +17,7 @@ async function employeeHandler(event) {
         const response = await fetch(`api/employees`, {
             method: 'POST',
             body: JSON.stringify({
+                employee_id,
                 first_name,
                 last_name,
             }),
@@ -23,12 +25,14 @@ async function employeeHandler(event) {
                 'Content-Type': 'application/json',
             },
         });
+        document.location.replace('/employee');
     }
 }
 
 async function searcher(event) {
     event.preventDefault();
     const id = document.getElementById('selection').value;
+
     const employees = await fetch(`/api/employees`).then((response) => {return response.json()});
 
     employees.forEach((employee) => 
@@ -43,6 +47,7 @@ async function searcher(event) {
 async function destroyer(event) {
     event.preventDefault();
     const id = document.getElementById('selection').value;
+
     await fetch(`api/employees/${id}`, 
         {method: 'DELETE'},
     );
@@ -52,11 +57,23 @@ async function destroyer(event) {
 async function editor(event) {
     event.preventDefault();
     const id = document.getElementById('selection').value;
+    const first_name = document.getElementById('first_name').value;
+    const last_name = document.getElementById('last_name').value;
 
+    await fetch(`api/employees/${id}`, 
+        {method: 'PUT',
+        body: JSON.stringify({
+            first_name, last_name,
+        }),
+        headers: {
+            'Content-Type': 'application/json' 
+        },
+        },
+    );
 
 }
 
 submit.addEventListener('click', employeeHandler);
 search.addEventListener('click', searcher);
 del.addEventListener('click', destroyer);
-edit.addEventListener('click', employeeHandler);
+edit.addEventListener('click', editor);

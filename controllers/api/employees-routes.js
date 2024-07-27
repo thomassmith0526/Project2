@@ -28,6 +28,7 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
     try {
         const employeeData = await Employee.create({
+            employee_id: req.body.employee_id,
             first_name: req.body.first_name,
             last_name: req.body.last_name,
         });
@@ -36,6 +37,25 @@ router.post('/', async (req, res) => {
         res.status(400).json(err);
     }
 });
+
+router.put('/:id', async (req, res) => {
+    try {
+        const employeeData = await Employee.update(
+        {
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+        },
+        {
+            where: {
+            employee_id: req.params.id,
+            },
+        },
+    );
+        res.status(200).json(employeeData);
+    } catch (err) {
+        res.status(400).json(err);
+    }
+})
 
 router.delete('/:id', async (req, res) => {
     try {
