@@ -91,3 +91,7 @@ footer div{
     margin-bottom: 5px; 
     display:flex; 
 }
+
+.form-group {
+    margin-bottom: 20px;
+}

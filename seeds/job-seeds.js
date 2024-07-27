@@ -9,13 +9,13 @@ const jobData =[
         task_id: '3',
         date: '2024-06-02',
         comments: 'Gate code is 7373',
-        isDone: false
-    },
+        isDone: true
+    },   
     {
         client_id: '3',
         employee_id: '2', 
         task_id: '1',
-        date:'2023-09-26',
+        date:'2024-09-26',
         comments:'They like strips cut in there grass',
         isDone: false
     },
@@ -33,7 +33,7 @@ const jobData =[
         task_id: '2',
         date:'2024-06-23',
         comments:'',
-        isDone: false
+        isDone: true
     }
 ];
 
