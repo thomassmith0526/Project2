@@ -41,20 +41,6 @@ router.get('/employee', async (req, res) => {
     res.render('employee', {employees})
 })
 
-// router.get('/employee/:id', async (req, res) => {
-//     const employeeData = await Employee.findByPk(req.params.id);
-//     const employee = employeeData.get({ plain: true });
-
-//     res.render('employee', {employee});
-// })
-
-router.get('/employee', async (req, res) => {
-    const employeeData = await Employee.findAll()
-    const employees = employeeData.map((employee) => employee.get({ plain: true}))
-
-    res.render('employee', {employees})
-})
-
 // router.get('/', async (req,res) =>{
 //     const jobData = await Job.findAll()
 //     const taskData = await Task.findAll()
