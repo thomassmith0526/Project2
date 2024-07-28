@@ -6,8 +6,8 @@ router.get('/', async (req, res) => {
         res.json(err);
     })
     res.json(employeeData)
-    // const employees = employeeData.map((employee) => employee.get({ plain: true }));
-    // res.render('', {employees})
+    const employees = employeeData.map((employee) => employee.get({ plain: true }));
+    res.render('employee', {employees})
 })
 
 router.get('/:id', async (req, res) => {
@@ -18,8 +18,8 @@ router.get('/:id', async (req, res) => {
             return;
         }
         res.json(employeeData)
-        // const employee = employeeData.get({ plain: true});
-        // res.render('',employee);
+        const employee = employeeData.get({ plain: true});
+        res.render('employee', employee);
     } catch (err) {
         res.status(500).json(err);
     }
@@ -28,6 +28,7 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
     try {
         const employeeData = await Employee.create({
+            employee_id: req.body.employee_id,
             first_name: req.body.first_name,
             last_name: req.body.last_name,
         });
@@ -36,5 +37,38 @@ router.post('/', async (req, res) => {
         res.status(400).json(err);
     }
 });
+
+router.put('/:id', async (req, res) => {
+    try {
+        const employeeData = await Employee.update(
+        {
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+        },
+        {
+            where: {
+            employee_id: req.params.id,
+            },
+        },
+    );
+        res.status(200).json(employeeData);
+    } catch (err) {
+        res.status(400).json(err);
+    }
+})
+
+router.delete('/:id', async (req, res) => {
+    try {
+        const employee = await Employee.destroy({
+            where: {
+              employee_id: req.params.id,
+            },
+        });
+        res.status(200).json(employee);
+    } catch (err) {
+        res.status(400).json(err);
+    }
+    console.log('request completed');
+})
 
 module.exports = router;

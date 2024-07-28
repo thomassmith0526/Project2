@@ -1,0 +1,29 @@
+<h2>Add Employee</h2>
+
+<form class="add-client">
+  <div class="form-group">
+    <label for="first_name">First Name:</label>
+    <input class="form-input" type="text" id="first_name" placeholder="First Name"/>
+    <label for="last_name">Last Name:</label>
+    <input class="form-input" type="text" id="last_name" placeholder="Last Name" />
+    <button class="btn btn-primary" id="submit" type="submit">Submit</button>
+  </div>
+  <div class="form-group">
+    <label for="selection">Select employee id:</label>
+    <select class="form-select" name="id" id="selection">
+        {{#each employees as |employee|}}
+            <option value="{{employee.employee_id}}">{{employee.employee_id}}</option>
+        {{/each}}
+    </select>
+    <button class="btn btn-primary" id="search" type="submit">Search</button>
+    <div class="form-group">
+      <label id="ID">ID:*/</label>
+      <label id="First name">First name:********/</label>
+      <label id="Last name">Last name:********</label>
+    </div>
+    <button class="btn btn-primary" id="delete" type="submit">Delete</button>
+    <button class="btn btn-primary" id="edit" type="submit">Edit</button>
+  </div>
+</form>
+
+<script src="/js/employee.js"></script>

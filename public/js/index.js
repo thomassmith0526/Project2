@@ -1,4 +1,4 @@
-async function newFormHandler(event) {
+async function clientHandler(event) {
     event.preventDefault()
     console.log('shhh micah')
     
@@ -7,6 +7,16 @@ async function newFormHandler(event) {
     const last_name = document.getElementById('last_name').value;
     const location = document.getElementById('location').value;
     const task = document.getElementById('task').value
+    //Added this to handle empty fields
+    if (first_name == "" || last_name == "") {
+        window.alert("Please, input required fields before adding client");
+        return;
+    } 
+    
+    if (location == "") {
+        window.alert("Please, input required fields before adding client");
+        return;
+    }
 
     const response = await fetch(`api/clients`, {
         method: 'POST',
@@ -39,6 +49,8 @@ async function newFormHandler(event) {
     //     alert('Failed to add Task')
     // }
 }
+
+
 addEventListener('submit', newFormHandler)
 document.querySelector('.form-group')
     
