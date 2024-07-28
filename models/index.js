@@ -11,8 +11,8 @@ const Task = require('./task');
 
 // Job/Client Relations -- I think this is done
 
-Client.belongsTo(Job, {foreignKey: 'id'})
-Job.hasOne(Client, {foreignKey: 'id'})
+Job.belongsTo(Client, {foreignKey: 'client_id'})
+Client.hasOne(Job, {foreignKey: 'client_id'})
 
 
 // Job/Employee relations : NEED TO BE ONE TO MANY HELP
@@ -20,8 +20,8 @@ Job.hasOne(Client, {foreignKey: 'id'})
 Job.belongsTo(Employee,{foreignKey: 'employee_id'})
 Employee.hasOne(Job, {foreignKey: 'employee_id'})
 
-Job.belongsTo(Task,{foreignKey: 'employee_id'})
-Task.hasOne(Job, {foreignKey: 'employee_id'})
+Job.belongsTo(Task,{foreignKey: 'task_id'})
+Task.hasOne(Job, {foreignKey: 'task_id'})
 
 module.exports = {
     Client,

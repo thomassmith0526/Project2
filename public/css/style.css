@@ -92,6 +92,10 @@ footer div{
     display:flex; 
 }
 
+<<<<<<< HEAD
+.form-group {
+    margin-bottom: 20px;
+=======
 .client-column {
     min-width: 30%;
     width: 33.3%;
@@ -104,4 +108,5 @@ footer div{
     border-style: solid; 
     margin-bottom: 5px; 
     display:flex; 
+>>>>>>> efe7258ce75525ca40bbed0e9fb87b637040e7db
 }
