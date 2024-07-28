@@ -15,9 +15,7 @@ async function newFormHandler(event) {
             last_name,
             location,
         }),
-        headers: {
-            'Content-Type': 'application/json',
-          },
+      
     });
     if (response.ok) {
         document.location.replace('/');
