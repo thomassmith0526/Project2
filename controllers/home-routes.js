@@ -31,6 +31,13 @@ router.get('/client', async (req, res) => {
     res.render('client',  {tasks,clients} )
 })
 
+router.get('/employee', async (req, res) => {
+    const employeeData = await Employee.findAll()
+    const employees = employeeData.map((employee) => employee.get({ plain: true}))
+
+    res.render('employee', {employees})
+})
+
 // router.get('/', async (req,res) =>{
 //     const jobData = await Job.findAll()
 //     const taskData = await Task.findAll()
