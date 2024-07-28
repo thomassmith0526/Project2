@@ -9,9 +9,18 @@ console.log('wake')
     const task_id = document.getElementById('task').value;
     const date = document.getElementById('date').value;
     const comments = document.getElementById('comments').value;
-    const complete = document.getElementById('isDone').value;   
+    const isDone = document.getElementById('isDone').checked;
 
-    const response = await fetch(`/`, {
+    console.log({
+        client_id,
+        employee_id,
+        task_id,
+        date,
+        comments,
+        isDone,
+    })
+
+    const response = await fetch(`/api/jobs`, {
         method: 'POST',
         body: JSON.stringify({
             client_id,
@@ -19,7 +28,7 @@ console.log('wake')
             task_id,
             date,
             comments,
-            complete,
+            isDone,
         }),
         headers: {
             'Accept': 'application/json',

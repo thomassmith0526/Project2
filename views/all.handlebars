@@ -2,22 +2,22 @@
 
 <form class="add-job">
   <div class="form-group">
-    <label for="client_id">Client ID</label>
+    <label for="client_id">Client</label>
     <select class="form-select" id="client_id" name="client">
       {{#each clients as |client|}}
-      <option value="{{client.id}}">{{client.id}}</option>
+      <option value="{{client.id}}">{{client.last_name}}, {{client.first_name}}</option>
       {{/each}}
     </select>
-    <label for="employee_id">Employee ID</label>
+    <label for="employee_id">Employee</label>
     <select class="form-select" id="employee_id" name="employee">
       {{#each employees as |employee|}}
-      <option value="{{employee.id}}">{{employee.id}}</option>
+      <option value="{{employee.employee_id}}">{{employee.last_name}}, {{employee.first_name}}</option>
       {{/each}}
     </select>
     <label for="task">Task:</label>
     <select class="form-select" id="task" name="task">
       {{#each tasks as |task|}}
-      <option value="{{task.name}}">{{task.name}}</option>
+      <option value="{{task.id}}">{{task.name}}</option>
       {{/each}}
     </select>
     <label for="date">Date</label>
@@ -25,7 +25,7 @@
     <label for="comments">Comments</label>
     <input class="from-group" type="text" id="comments" placeholder="gate code, dogs, type of flowers." />
     <label for="isDone">Complete ?</label>
-    <input class="from-group" type="checkbox" id="isDone" {{isDone}}></input>
+    <input class="from-group" type="checkbox" id="isDone"></input>
     <button class="btn btn-primary" type="submit">Submit</button>
   </div>
 </form>
