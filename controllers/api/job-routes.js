@@ -18,16 +18,6 @@ router.get('/', async (req, res) => {
     res.json(jobData)
 })
    
- router.get('/', async (req, res) => {
-
-    const jobData = await Job.findAll().catch((err) => {
-        res.json(err);
-
-    })
-
-    res.json(jobData)
-
-})
 
 router.get('/:id', async (req, res) => {
     try {
@@ -47,8 +37,7 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
     try {
-        const jobData = await Job.create({
-        });
+        const jobData = await Job.create(req.body);
 
         res.status(200).json(jobData);
     } catch (err) {
