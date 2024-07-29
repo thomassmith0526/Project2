@@ -1,0 +1,32 @@
+<h2>Add Task</h2>
+
+<form class="add-task">
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input class="form-input" type="text" id="name" placeholder="Task Name" />
+
+        <label for="description">Description:</label>
+        <input class="form-input" type="text" id="description" placeholder="Task Description" />
+
+        <label for="price">Price:</label>
+        <input class="form-input" type="text" id="price" placeholder="Task Price" />
+
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+</form>
+
+{{#each tasks as |task|}}
+    <div class="task-field">
+        <section class="task-column">
+            {{!-- <ul>Task Id: {{task.id}}</ul> --}}
+        </section>
+        <section class="task-column">
+            <ul>Name: {{task.name}}</ul>
+            <ul>Description: {{task.description}}</ul>
+            <ul class="price"> Price: ${{task.price}}</ul>
+        </section>
+    </div>
+{{/each}}
+
+<script src="/js/index2.js"></script>
+<script src="/js/index.js"></script>
