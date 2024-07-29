@@ -1,112 +1,173 @@
-:root{
-    /* background color */
-    --bg-color: #2d313a;
-    /* pretty much everything else */
-    --default-color:#FEF3E2;
-    --main-color: #2e4930;
-}
-
 *{
     margin:0;
     padding:0;
-    background-color: var(--bg-color);
-    color: var(--default-color);
-}
-html {
-    /* background-color: var(--main-color); */
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-image: url('../images/lawn3.jfif');
+    background-size: cover;
 }
 
 header {
     display: flex;
-    justify-content: space-between;
-
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: var(--main-color);
+    justify-content: center;
+    font-family: 'Brush Script MT', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url('../images/lawn.jpg');
+    border-color: teal;
+    border-bottom: double;
+    border-width: 5px;
+    width: 100%;
     height: 20%;
-    /* color: #ffffff; */
+    font-size: 30px;
 }
+
+.logo {
+    align-self: flex-start;
+    background-image: url('../images/logo.png');
+    display: block;
+}
+
+.title {
+    color: teal;
+}
+
 main {
     display: flex;
     min-height: 80vh;
 }
 
-
 #nav-bar {
     width: 20%;
-    background-color: var(--main-color);
-    
-    /* min-height: vh */
-
-
 }
+
 #nav-bar section {
-    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Brush Script MT', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #nav-bar section ul {
-    text-align: right;
+    margin-top: 5%;
+}
+
+#nav-bar section ul:hover {
+    background-color: aqua;
+}
+
+#nav-bar section ul a {
+    display: block;
+    text-decoration: none;
+    color: teal;
+}
+
+#nav-bar section ul {
+    text-align: center;
+    text-decoration: none;
     margin-right: 10px;
     font-size: 150%;
     padding-right: 10px;
-    border: solid;
-    
-    /* background-color: var(--main-color); */
-
-    /* color: var(--textColor);
-    border-color: var(--textColor); */
+    border-style: double; 
+    background-color: lightgreen;
+    color: cyan;
+    border-color: teal;
 }
 
 #hb-body {
     width: 80%
 }
 
-
-footer div{
-    /* padding: 5px; */
-
-    /* margin-top: auto; */
-    background-color: var(--main-color);
-    min-height: 20vh;
-
-
+footer {
+    margin-left: 5%;
+    margin-top: 100%;
 }
-/* inside of test.handlebars */
+
+footer div {
+    min-height: 20vh;
+    font-family: 'Times New Roman', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 120%;
+    color: cyan;
+}
+
+.jobs {
+    padding: 2%;
+    height: 100vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: magenta;
+    background-image: url('../images/lawn4.jfif');
+    background-size: cover;
+    border-style: double;
+    border-width: 10px;
+    border-color: teal;
+}
+
+.employees {
+    padding: 2%;
+    height: 100vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: blue;
+    background-image: url('../images/lawn5.jfif');
+    background-size: cover;
+    border-style: double;
+    border-width: 10px;
+    border-color: teal;
+}
+
+.clients {
+    padding: 2%;
+    height: 100vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: darkblue;
+    background-image: url('../images/lawn2.jfif');
+    background-size: cover;
+    border-style: double;
+    border-width: 10px;
+    border-color: teal;
+}
+
+.form-group button{
+    width: 8%;
+    height: 4vh;
+    background-color: lightgreen;
+    color: teal;
+    border-style: double;
+    border-width: 3px;
+    border-color: teal;
+}
+
+.form-group button:hover{
+    background-color: aqua;
+}
+
 .job-column {
     min-width: 30%;
     width: 33.3%;
     color: aqua;
     display: block;
-    
 }
 
 .job-field {
-    /* justify-content: space-evenly; */
+    margin-bottom: 2%;
+    justify-content: space-evenly;
     border-style: solid; 
-    margin-bottom: 5px; 
     display:flex; 
+    background-color: teal;
 }
 
-<<<<<<< HEAD
-.form-group {
-    margin-bottom: 20px;
-=======
 .client-column {
     min-width: 30%;
     width: 33.3%;
     color: aqua;
     display: block;
-    
 }
 
 .client-field {
+    margin-bottom: 2%;
     border-style: solid; 
-    margin-bottom: 5px; 
     display:flex; 
->>>>>>> efe7258ce75525ca40bbed0e9fb87b637040e7db
+    background-color: teal;
 }
+
