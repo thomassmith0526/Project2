@@ -173,3 +173,17 @@ footer div {
     background-color: teal;
 }
 
+.employee-column {
+    min-width: 30%;
+    width: 33.3%;
+    color: aqua;
+    display: block;
+}
+
+.employee-field {
+    margin-bottom: 2%;
+    border-style: solid; 
+    display:flex; 
+    background-color: teal;
+}
+
