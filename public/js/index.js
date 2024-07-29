@@ -6,7 +6,7 @@ async function clientHandler(event) {
 
     const last_name = document.getElementById('last_name').value;
     const location = document.getElementById('location').value;
-    const task = document.getElementById('task').value
+    // const task = document.getElementById('task').value
     //Added this to handle empty fields
     if (first_name == "" || last_name == "") {
         window.alert("Please, input required fields before adding client");
@@ -17,14 +17,18 @@ async function clientHandler(event) {
         window.alert("Please, input required fields before adding client");
         return;
     }
+    console.log(first_name, last_name, location)
 
-    const response = await fetch(`api/clients`, {
+    const response = await fetch(`/api/clients`, {
         method: 'POST',
         body: JSON.stringify({
             first_name,
             last_name,
             location,
         }),
+        headers: {
+            'Content-Type': 'application/json',
+          },
       
     });
     if (response.ok) {
@@ -37,9 +41,9 @@ async function clientHandler(event) {
     //     body: JSON.stringify({
     //         task
     //     }),
-    //     headers: {
-    //         'Content-Type': 'application/json',
-    //       },
+        // headers: {
+        //     'Content-Type': 'application/json',
+        //   },
     // });
     // if(responseTask.ok) {
     //     document.location.replace('/');
@@ -49,7 +53,7 @@ async function clientHandler(event) {
 }
 
 
-addEventListener('submit', newFormHandler)
+addEventListener('submit', clientHandler)
 document.querySelector('.form-group')
     
 
