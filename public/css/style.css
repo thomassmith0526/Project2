@@ -110,7 +110,7 @@ footer div {
     padding: 2%;
     height: 100vh;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: blue;
+    color: rgb(209, 48, 150);
     background-image: url('../images/lawn5.jfif');
     background-size: cover;
     border-style: double;
