@@ -3,17 +3,17 @@ const { Task } = require('../models');
 const taskData = [
   {
     name: 'Tree Trimming',
-    description: 'Tree Trimming STUFFFS',
+    description: 'Tree Trimming ',
     price: 300.00
   },
   {
     name: 'Edging',
-    description: 'Edging STUFFFFS',
+    description: 'Edging ',
     price: 25.00
   },
   {
     name: 'Mowing',
-    description: 'Mowing STUFFFFS',
+    description: 'Mowing ',
     price: 50.00
   },
   {
