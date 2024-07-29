@@ -27,6 +27,20 @@
     <button class="btn btn-primary" id="edit" type="submit">Edit</button>
   </div>
 </form>
+
+{{#each employees as |employee|}}
+    <div class="employee-field">
+        <section class="employee-column">
+            <ul>Employee Id: {{employee.employee_id}}</ul>
+        </section>
+        <section class="employee-column">
+            <ul>First Name: {{employee.first_name}}</ul>
+        </section>
+        <section class="employee-column">
+            <ul>Last Name: {{employee.last_name}}</ul>
+        </section>
+    </div>
+{{/each}}
 </section>
 
 <script src="/js/employee.js"></script>
