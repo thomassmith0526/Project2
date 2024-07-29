@@ -1,7 +1,6 @@
 const jobFields = document.getElementsByClassName('JobField')
 
 async function getData() {
-    // localhost/api/employees
     const url = "http://localhost:3001/api/jobs";
 
     try {
@@ -19,15 +18,12 @@ async function getData() {
     }
   }
 
-  // let element = document.createElement('jField')
 function useData(data) {
-    // console.log(data);
-    // console.log(jobFields)
-    // console.log(element)
+    
+  
     for (let i = 0; i < jobFields.length; i++) {
       console.log(jobFields[i])
       let jobField = jobFields[i].innerHTML
-      // console.log(jobField)
        let element = ` 
 <add-to-calendar-button
   name="Title"

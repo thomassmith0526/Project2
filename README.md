@@ -7,25 +7,40 @@
  - show them when we will be out to service their yards.
  - and we can even showcase each employees speciality 
 
+[Deployed Application](https://project2-hivl.onrender.com/)
 
 ## Table Of Contents
 - [Visuals](#visuals)
 - [Usage](#usage)
 - [Support](#support)
 - [References](#references)
+- [Contributors](#contributors)
 - [License](#license)
 
 ## Visuals
-<!-- If we add any
-![Screenshot](path to SS)
-![gif](path to demo)-->
+
+![screenshot1](./public/images/Visual1.png)
+![screenshot2](./public/images/Visual2.png)
 
 ## Usage
+The Intended use of this application is for our busniess to track jobs / added clients on the go in a conveient way to advance our business ventures. 
 
 ## Support
+You can contact any of the devs for support
+
+## Contributors 
+
+- [Micah Cox](https://github.com/Kalink52)
+- [Thomas Smith](https://github.com/thomassmith0526)
+- [Rashawn Hall](https://github.com/TheR16H)
+- [Daved Strzykalski](https://github.com/dstrzykalski)
+- [Ernesto Gonzalez](https://github.com/ErnestoAG)
+- [Kenneth Hasson](https://github.com/kenneth-hass)
 
 ## References
-<!-- helpful links  -->
+- [Render Guide](https://coding-boot-camp.github.io/full-stack/render/render-deployment-g)
+- [Add to Calendar npm](https://www.npmjs.com/package/add-to-calendar-button)
+
 
 ## License 
-Please refer to the LICENSE in the repo.
+Please refer to the [LICENSE](./LICENSE) in the repo.
