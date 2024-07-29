@@ -159,14 +159,14 @@ footer div {
     background-color: teal;
 }
 
-.client-column {
+.client-column, .task-column {
     min-width: 30%;
     width: 33.3%;
     color: aqua;
     display: block;
 }
 
-.client-field {
+.client-field, .task-field {
     margin-bottom: 2%;
     border-style: solid; 
     display:flex; 

@@ -38,6 +38,16 @@ router.get('/employee', async (req, res) => {
     res.render('employee', {employees})
 })
 
+router.get('/tasks', async (req, res) => {
+    try {
+        const taskData = await Task.findAll();
+        const tasks = taskData.map((task) => task.get({ plain: true }));
+        res.render('tasks', { tasks });
+    } catch (err) {
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
 // router.get('/', async (req,res) =>{
 //     const jobData = await Job.findAll()
 //     const taskData = await Task.findAll()
