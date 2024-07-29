@@ -26,30 +26,18 @@ async function clientHandler(event) {
             last_name,
             location,
         }),
+
         headers: {
             'Content-Type': 'application/json',
           },
-      
+     
     });
     if (response.ok) {
         document.location.replace('/');
     } else {
         alert('Failed to add Client')
     }
-    // const responseTask = await fetch(`/api/jobs`, {
-    //     method: 'POST',
-    //     body: JSON.stringify({
-    //         task
-    //     }),
-        // headers: {
-        //     'Content-Type': 'application/json',
-        //   },
-    // });
-    // if(responseTask.ok) {
-    //     document.location.replace('/');
-    // } else {
-    //     alert('Failed to add Task')
-    // }
+
 }
 
 
