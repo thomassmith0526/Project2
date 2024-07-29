@@ -2,6 +2,7 @@ const submit = document.getElementById('submit');
 const search = document.getElementById('search');
 const edit = document.getElementById('edit');
 const del = document.getElementById('delete');
+var len = document.getElementById('selection').length;
 
 //This function works like Micah's but with less fields
 async function employeeHandler(event) {
@@ -9,7 +10,7 @@ async function employeeHandler(event) {
     
     const first_name = document.getElementById('first_name').value;
     const last_name = document.getElementById('last_name').value;
-    const employee_id = document.getElementById('selection').length + 1;
+    const employee_id = Number(document.getElementById('selection')[len - 1].value) + 1;
 
     if (first_name == "" || last_name == "") {
         window.alert("Please, input required fields before adding employee");

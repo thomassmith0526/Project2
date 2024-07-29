@@ -13,25 +13,27 @@ body {
 
 header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     font-family: 'Brush Script MT', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-image: url('../images/lawn.jpg');
-    border-color: teal;
     border-bottom: double;
     border-width: 5px;
+    border-color: cyan;
     width: 100%;
     height: 20%;
     font-size: 30px;
 }
 
 .logo {
-    align-self: flex-start;
-    background-image: url('../images/logo.png');
-    display: block;
+    justify-self: flex-start;
 }
 
 .title {
     color: teal;
+}
+
+.description {
+    color: magenta;
 }
 
 main {
