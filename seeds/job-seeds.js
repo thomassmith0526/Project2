@@ -4,7 +4,7 @@ const { Job, Employee } = require('../models');
 const jobData =[
     {
         client_id: '1',
-        employee_id: 2,
+        employee_id: '2',
         task_id: '3',
         date: '2024-02-06',
         comments: 'Gate code is 7373',
@@ -14,7 +14,7 @@ const jobData =[
         client_id: '3',
         employee_id: '2', 
         task_id: '1',
-        date:'2024-06-09',
+        date:'2024-08-09',
         comments:'They like strips cut in there grass',
         isDone: false
     },
