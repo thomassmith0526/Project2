@@ -13,8 +13,8 @@
 - [Visuals](#visuals)
 - [Usage](#usage)
 - [Support](#support)
-- [References](#references)
 - [Contributors](#contributors)
+- [References](#references)
 - [License](#license)
 
 ## Visuals
